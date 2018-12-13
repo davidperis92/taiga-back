@@ -76,6 +76,7 @@ def _make_extensions_list(project=None):
             TaigaReferencesExtension(project),
             TargetBlankLinkExtension(),
             "markdown.extensions.extra",
+            "markdown.extensions.fenced_code",
             "markdown.extensions.codehilite",
             "markdown.extensions.sane_lists",
             "markdown.extensions.toc",

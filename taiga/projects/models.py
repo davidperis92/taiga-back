@@ -1101,6 +1101,8 @@ class ProjectTemplate(TaggedMixin, TagsColorsMixin, models.Model):
                 project=project
             )
 
+        if self.us_duedates is None:
+            self.us_duedates = []
         for us_duedate in self.us_duedates:
             UserStoryDueDate.objects.create(
                 name=us_duedate["name"],
@@ -1129,6 +1131,8 @@ class ProjectTemplate(TaggedMixin, TagsColorsMixin, models.Model):
                 project=project
             )
 
+        if self.task_duedates is None:
+            self.task_duedates = []
         for task_duedate in self.task_duedates:
             TaskDueDate.objects.create(
                 name=task_duedate["name"],
@@ -1157,6 +1161,8 @@ class ProjectTemplate(TaggedMixin, TagsColorsMixin, models.Model):
                 project=project
             )
 
+        if self.issue_duedates is None:
+            self.issue_duedates = []
         for issue_duedate in self.issue_duedates:
             IssueDueDate.objects.create(
                 name=issue_duedate["name"],
